@@ -1,0 +1,13 @@
+1) Renderer: Resolution 40px*40px
+2) Renderer: PNG RGBA
+3) Ev. Ground-Quader verkleinern (zuerst speichern)
+4) Viewport Quadratisch und ausrichtn
+	- User Ortho
+	- Winkel
+        - Grösse
+5) Deselektieren
+6) 3D View -> Menülieste -> Method to display/shade objects in 3D view -> Texture
+7) UV/Image Editor öffnen
+8) 3D View -> Menülieste unten -> 2ter Button von recgts: "OpenGL render active view port"
+9) UV/Image Editor -> select "Render result" -> Image "Save as image"
+10) Ground-Quader wieder normal
