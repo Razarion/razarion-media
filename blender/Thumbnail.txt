@@ -1,15 +1,15 @@
 1) Renderer
 	-Resolution 40px*40px
 	-PNG RGBA
-	- Shading: Transparent
+	-Shading: Transparent
 2) Ev. Ground-Quader verkleinern (zuerst speichern)
 3) Viewport Quadratisch und ausrichtn
 	- User Ortho
 	- Winkel
-        - Grösse
+    - Grösse
 4) Object Mode & Deselektieren
-5) 3D View -> Menülieste -> Method to display/shade objects in 3D view -> Texture
-6) UV/Image Editor öffnen
-7) 3D View -> Menülieste unten -> 2ter Button von recgts: "OpenGL render active view port"
+???? 5) 3D View -> Menülieste -> Method to display/shade objects in 3D view -> Texture
+???? 6) UV/Image Editor öffnen
+7) 3D View -> Menülieste unten -> 2ter Button von rechts: "OpenGL render active view port"
 8) UV/Image Editor -> select "Render result" -> Image "Save as image"
 9) Ground-Quader wieder normal
