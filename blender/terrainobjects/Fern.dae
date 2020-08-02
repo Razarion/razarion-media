@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.79.0 commit date:2018-03-22, commit time:14:10, hash:f4dc9f9d68b</authoring_tool>
+    </contributor>
+    <created>2018-12-21T14:48:15</created>
+    <modified>2018-12-21T14:48:15</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="Fern01_png" name="Fern01_png">
+      <init_from>Fern01.png</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="Material-effect">
+      <profile_COMMON>
+        <newparam sid="Fern01_png-surface">
+          <surface type="2D">
+            <init_from>Fern01_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Fern01_png-sampler">
+          <sampler2D>
+            <source>Fern01_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Fern01_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane-mesh" name="Plane">
+      <mesh>
+        <source id="Plane-mesh-positions">
+          <float_array id="Plane-mesh-positions-array" count="42">0.75 0 -0.395939 -0.75 0 -0.395939 0.75 0 0.4661787 -0.75 0 0.4661787 0.75 0.1615512 1.126431 -0.75 0.1615511 1.126431 0.75 0.3913859 1.470558 -0.75 0.3913858 1.470558 0.75 0.574009 1.674253 -0.7500001 0.5740089 1.674253 0.7499999 0.8128238 1.793661 -0.7500001 0.8128237 1.793661 0.7499999 1.114854 1.856876 -0.7500001 1.114854 1.856876</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-positions-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-normals">
+          <float_array id="Plane-mesh-normals-array" count="33">0 1 0 0 0.971346 -0.2376697 0 0.8315853 -0.5553972 -1.45249e-7 0.7445694 -0.6675451 0 0.4472135 -0.8944273 0 0.2048633 -0.9787907 0 0.971346 -0.2376697 0 0.8315853 -0.5553971 0 0.7445696 -0.6675449 0 0.4472136 -0.8944272 0 0.2048633 -0.9787907</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-normals-array" count="11" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane-mesh-map-0">
+          <float_array id="Plane-mesh-map-0-array" count="72">0.9294291 -0.002412736 0.105022 0.304912 0.1050221 -0.002412855 0.9294289 0.3049122 0.105022 0.5472199 0.105022 0.304912 0.105022 0.5472199 0.9294288 0.6947374 0.1050219 0.6947374 0.9294288 0.6947374 0.1050219 0.7922605 0.1050219 0.6947374 0.9294289 0.7922604 0.1050219 0.8874411 0.1050219 0.7922605 0.1050219 0.8874411 0.9294291 0.9974408 0.105022 0.9974409 0.9294291 -0.002412736 0.9294289 0.3049122 0.105022 0.304912 0.9294289 0.3049122 0.9294288 0.5472201 0.105022 0.5472199 0.105022 0.5472199 0.9294288 0.5472201 0.9294288 0.6947374 0.9294288 0.6947374 0.9294289 0.7922604 0.1050219 0.7922605 0.9294289 0.7922604 0.9294291 0.8874409 0.1050219 0.8874411 0.1050219 0.8874411 0.9294291 0.8874409 0.9294291 0.9974408</float_array>
+          <technique_common>
+            <accessor source="#Plane-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane-mesh-vertices">
+          <input semantic="POSITION" source="#Plane-mesh-positions"/>
+        </vertices>
+        <triangles material="Material-material" count="12">
+          <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 2 0 1 0 0 2 3 1 3 4 1 4 2 1 5 4 2 6 7 2 7 6 2 8 7 3 9 8 3 10 6 3 11 9 4 12 10 4 13 8 4 14 10 5 15 13 5 16 12 5 17 1 0 18 3 0 19 2 0 20 3 6 21 5 6 22 4 6 23 4 7 24 5 7 25 7 7 26 7 8 27 9 8 28 8 8 29 9 9 30 11 9 31 10 9 32 10 10 33 11 10 34 13 10 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Fern01" name="Fern01">
+      <node id="Plane" name="Plane" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plane-mesh" name="Plane">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material-material" target="#Material-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Fern01"/>
+  </scene>
+</COLLADA>

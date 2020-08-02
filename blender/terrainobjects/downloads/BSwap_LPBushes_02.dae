@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.79.0 commit date:2018-03-22, commit time:14:10, hash:f4dc9f9d68b</authoring_tool>
+    </contributor>
+    <created>2018-12-21T13:47:28</created>
+    <modified>2018-12-21T13:47:28</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="Foliage_Bushes01_DiffuseMask_tga" name="Foliage_Bushes01_DiffuseMask_tga">
+      <init_from>Foliage_Bushes01_DiffuseMask.tga</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="Bushes01-effect">
+      <profile_COMMON>
+        <newparam sid="Foliage_Bushes01_DiffuseMask_tga-surface">
+          <surface type="2D">
+            <init_from>Foliage_Bushes01_DiffuseMask_tga</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Foliage_Bushes01_DiffuseMask_tga-sampler">
+          <sampler2D>
+            <source>Foliage_Bushes01_DiffuseMask_tga-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Foliage_Bushes01_DiffuseMask_tga-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <transparent opaque="A_ONE">
+              <texture texture="Foliage_Bushes01_DiffuseMask_tga-sampler" texcoord="UVMap"/>
+            </transparent>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+        <extra>
+          <technique profile="GOOGLEEARTH">
+            <double_sided sid="double_sided" type="int">1</double_sided>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra><technique profile="MAX3D"><double_sided>1</double_sided></technique></extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Bushes01-material" name="Bushes01">
+      <instance_effect url="#Bushes01-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Bushes_01-mesh" name="Bushes_01">
+      <mesh>
+        <source id="Bushes_01-mesh-positions">
+          <float_array id="Bushes_01-mesh-positions-array" count="51">-2.359491 9.127148 22.13324 26.21282 51.15867 25.54185 -5.676811 -4.20633 -11.95893 12.78895 11.82087 33.24467 2.810314 -3.806491 3.122312 13.43489 22.47707 -30.05096 2.212677 2.670783 28.25424 -18.2487 42.6674 23.45804 30.11431 -6.763116 5.929962 -8.643666 -0.8212525 2.753139 -27.08004 34.35253 -5.347158 36.67883 20.94728 27.28862 -15.34685 25.37997 -24.40895 -5.802769 0.3146479 -3.574458 -0.7496042 19.92318 17.67946 32.35163 0.3165116 9.679161 -9.479238 37.09149 -3.131205</float_array>
+          <technique_common>
+            <accessor source="#Bushes_01-mesh-positions-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bushes_01-mesh-normals">
+          <float_array id="Bushes_01-mesh-normals-array" count="21">0.8133001 -0.5643569 0.1415775 0.8935958 -0.4440512 -0.06561577 0.9199565 0.3277406 -0.2150959 0.0496537 -0.1993474 -0.9786701 0.6503615 0.4094439 0.6398325 -0.6537318 0.3207619 0.6853806 -0.5371667 -0.7472907 -0.3911633</float_array>
+          <technique_common>
+            <accessor source="#Bushes_01-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bushes_01-mesh-map-0">
+          <float_array id="Bushes_01-mesh-map-0-array" count="36">-0.005299985 0.3477241 0.5443767 0.2795888 0.8046064 0.6027808 0.8046064 0.6027808 0.6178062 0.9858766 0.1354202 0.9844608 0.8046064 0.6027808 0.6178062 0.9858766 0.1354202 0.9844608 -0.005299985 0.3477241 0.5443767 0.2795888 0.8046064 0.6027808 0.1354202 0.9844608 -0.005299985 0.3477241 0.6178062 0.9858766 -0.005299985 0.3477241 0.5443767 0.2795888 0.8046064 0.6027808</float_array>
+          <technique_common>
+            <accessor source="#Bushes_01-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Bushes_01-mesh-vertices">
+          <input semantic="POSITION" source="#Bushes_01-mesh-positions"/>
+        </vertices>
+        <triangles material="Bushes01-material" count="6">
+          <input semantic="VERTEX" source="#Bushes_01-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Bushes_01-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Bushes_01-mesh-map-0" offset="2" set="0"/>
+          <p>1 0 0 0 0 1 2 0 2 3 1 3 4 1 4 5 1 5 8 2 6 9 3 7 10 3 8 7 4 9 6 4 10 8 2 11 13 5 12 11 5 13 12 5 14 15 6 15 14 6 16 16 6 17</p>
+        </triangles>
+      </mesh>
+      <extra><technique profile="MAYA"><double_sided>1</double_sided></technique></extra>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="BUshBlendswap" name="BUshBlendswap">
+      <node id="Bushes_01" name="Bushes_01" type="NODE">
+        <matrix sid="transform">0.04166643 2.09695e-9 0.01287097 -0.387693 0.01287097 -6.78833e-9 -0.04166643 0.3445849 0 0.04360913 -7.10482e-9 -0.1033394 0 0 0 1</matrix>
+        <instance_geometry url="#Bushes_01-mesh" name="Bushes_01">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Bushes01-material" target="#Bushes01-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#BUshBlendswap"/>
+  </scene>
+</COLLADA>
